@@ -1,14 +1,17 @@
-# FMF.ConsoleInputGuard
+# gregMod.ConsoleInputGuard (FMF.ConsoleInputGuard)
 
-Prevents accidental `P`-hotkey actions while typing into UI text inputs.
+Suppresses accidental **P** hotkey actions while a UI text field is focused (`InputField` / `TMP_InputField`).
 
-## Behavior
-
-- If a Unity `InputField` or `TMP_InputField` is focused, `KeyCode.P` is suppressed.
-- Outside focused text input, `P` behaves normally.
+| | |
+|:---|:---|
+| **In workspace** | Path `gregFramework/gregMod.ConsoleInputGuard/`. Overview: [gregFramework README](../README.md). |
+| **Remote** | [`mleem97/gregConsoleInputGuard`](https://github.com/mleem97/gregConsoleInputGuard) |
 
 ## Build
 
 ```powershell
-dotnet build .\mods\FMF.ConsoleInputGuard\FMF.ConsoleInputGuard.csproj -c Release /p:GameDir="C:\Program Files (x86)\Steam\steamapps\common\Data Center" -v minimal
+Set-Location $PSScriptRoot
+dotnet build .\FMF.ConsoleInputGuard.csproj -c Release -p:GameDir="C:\Program Files (x86)\Steam\steamapps\common\Data Center"
 ```
+
+(Adjust `GameDir` to your local installation.)
